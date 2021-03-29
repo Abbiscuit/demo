@@ -54,6 +54,11 @@ const IndexPage = () => {
               className="grid grid-cols-12 grid-rows-6 w-full h-full bg-gray-100 border-2 mx-auto"
               style={{ width: 500, height: 500 }}
             >
+              {
+                // テキスト(inputタグ)
+                // inputのクラスにtailwindクラスでcol-start-3...などのポジションを指定
+                // classNameというimageオブジェクトのkeyで位置を指定する必要がある
+              }
               {textState.map((text, idx) => {
                 return (
                   <div key={idx} className={text.className}>
@@ -69,6 +74,7 @@ const IndexPage = () => {
                 );
               })}
 
+              {/* 画像 */}
               {imageState.map((img, idx) => (
                 <div key={idx} className={img.className}>
                   <img
